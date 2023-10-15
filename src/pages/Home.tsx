@@ -7,6 +7,7 @@ import ProjectsSectionHome from "../components/projectsSectionHome/ProjectsSecti
 import QuotesCarousel from "../components/quotesCarousel/QuotesCarousel";
 import ReadInsightSection from "../components/readInsightsSection/ReadInsightSection";
 import StartWithIdeaSection from "../components/startWithIdeaSection/StartWithIdeaSection";
+import transition from "../transitions/PageTransitions";
 
 const Home = () => {
   return (
@@ -25,4 +26,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default transition(Home);

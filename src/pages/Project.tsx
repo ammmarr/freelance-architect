@@ -1,5 +1,6 @@
 import Footer from "../components/Footer/Footer";
 import ProjectDetailsHeroSection from "../components/projectDetailsHeroSection/ProjectDetailsHeroSection";
+import transition from "../transitions/PageTransitions";
 
 const Project = () => {
   return (
@@ -10,4 +11,4 @@ const Project = () => {
   );
 };
 
-export default Project;
+export default transition(Project);

@@ -1,24 +1,26 @@
 import { AnimatePresence } from "framer-motion";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import { NavBar } from "./components/Navbar/NavBar";
 import routes from "./routes";
 
 function App() {
+  const location = useLocation();
+
   return (
     <>
-      <BrowserRouter>
-        <AnimatePresence>
-          <NavBar />
+      <AnimatePresence mode="wait">
+        <NavBar />
 
-          <Routes>
-            {routes.map((each, i) => (
+        <Routes location={location} key={location.pathname}>
+          {routes.map((each, i) => (
+            <>
               <Route path={each.href} key={i} element={each.element} />
-            ))}
-          </Routes>
-        </AnimatePresence>
-      </BrowserRouter>
+            </>
+          ))}
+        </Routes>
+      </AnimatePresence>
     </>
   );
 }
