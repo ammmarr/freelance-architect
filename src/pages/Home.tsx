@@ -12,7 +12,7 @@ import transition from "../transitions/PageTransitions";
 const Home = () => {
   return (
     <>
-      <div className="container">
+      <>
         {" "}
         <HeroCard />
         <ProjectsSectionHome />
@@ -22,8 +22,8 @@ const Home = () => {
         <ReadInsightSection />
         <QuotesCarousel />
         <ContactSection />
-      </div>
-      <Footer />
+        <Footer />
+      </>
     </>
   );
 };
