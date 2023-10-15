@@ -11,18 +11,20 @@ import transition from "../transitions/PageTransitions";
 
 const Home = () => {
   return (
-    <div className="container">
-      {" "}
-      <HeroCard />
-      <ProjectsSectionHome />
-      <StartWithIdeaSection />
-      <CeoSection />
-      <AccordionSection />
-      <ReadInsightSection />
-      <QuotesCarousel />
-      <ContactSection />
+    <>
+      <div className="container">
+        {" "}
+        <HeroCard />
+        <ProjectsSectionHome />
+        <StartWithIdeaSection />
+        <CeoSection />
+        <AccordionSection />
+        <ReadInsightSection />
+        <QuotesCarousel />
+        <ContactSection />
+      </div>
       <Footer />
-    </div>
+    </>
   );
 };
 
