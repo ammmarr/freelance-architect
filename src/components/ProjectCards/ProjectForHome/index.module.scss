@@ -1,9 +1,9 @@
 .container {
   position: relative;
-  flex: 1;
-  width: 100%;
+  width: 50%;
   overflow: hidden;
   object-fit: contain;
+  height: 30vh;
   cursor: pointer;
   border: 1px solid var(--paleYellow);
   img {

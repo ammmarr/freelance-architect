@@ -1,8 +1,11 @@
-import CeoSection from "../ceoSection/CeoSection";
+import { useEffect, useState } from "react";
 import HeroCard from "../heroCard/HeroCard";
+import style from "./index.module.scss";
+import { AnimatePresence, motion } from "framer-motion";
+import ProjectCard from "../ProjectCards/ProjectForHome/ProjectCard";
 import ProjectsSectionHome from "../projectsSectionHome/ProjectsSectionHome";
 import StartWithIdeaSection from "../startWithIdeaSection/StartWithIdeaSection";
-import style from "./index.module.scss";
+import CeoSection from "../ceoSection/CeoSection";
 
 const HeroSection = () => {
   // const [bol, setBol] = useState(false);
@@ -41,7 +44,6 @@ const HeroSection = () => {
       >
         aslmdlk
       </button> */}
-      <HeroCard />
       <ProjectsSectionHome />
       <StartWithIdeaSection />
       <CeoSection />

@@ -1,7 +1,7 @@
 .projectsRow {
-  height: 30vh;
-  background-color: red;
+  min-height: 30vh;
   overflow: hidden;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
 }

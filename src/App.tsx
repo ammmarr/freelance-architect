@@ -1,13 +1,24 @@
 import { AnimatePresence } from "framer-motion";
-import "./App.css";
-import Home from "./pages/Home";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import { NavBar } from "./components/Navbar/NavBar";
+import routes from "./routes";
 
 function App() {
   return (
     <>
-      <AnimatePresence mode="wait">
-        <Home />
-      </AnimatePresence>
+      <BrowserRouter>
+        <AnimatePresence>
+          <NavBar />
+
+          <Routes>
+            {routes.map((each, i) => (
+              <Route path={each.href} key={i} element={each.element} />
+            ))}
+          </Routes>
+        </AnimatePresence>
+      </BrowserRouter>
     </>
   );
 }
