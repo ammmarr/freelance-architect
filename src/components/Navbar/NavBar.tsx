@@ -37,14 +37,17 @@ export const NavBar = () => {
     <nav
       className={
         show
-          ? `${style.mainNavShow} ${style.container}`
-          : `${style.mainNavHide} ${blurred}`
+          ? `${style.container} ${style.mainNavShow} ${blurred}`
+          : `${style.container} ${style.mainNavHide}`
       }
     >
       <div className={style.logoContainer}>
         <img src={logo} alt="" />
       </div>
-      <Link to="/projects">Projects</Link>
+      <div className={style.mainItemsWithUnderLine}>
+        <Link to={"/"}>TRAUM ARCHITECTURE</Link>
+        <Link to="/projects">PROJECTS</Link>
+      </div>
     </nav>
   );
 };

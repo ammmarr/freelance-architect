@@ -13,7 +13,7 @@ const ReadInsightSection = () => {
     autoplay: true,
     autoplaySpeed: 2000,
   };
-  const sliderRef = useRef<Slider | null>(null);
+  const sliderRef = useRef<Slider | null>(null);  
 
   const goToNextSlide = () => {
     if (sliderRef.current) {

@@ -1,11 +1,11 @@
 const accordionData = [
   {
-    title: "lorem isume",
+    title: "CONSULTANCY",
     description:
-      "lorem sd a dkjad fk adklj fakdj alkjg lkdsf ajkl fasjk fadkls fajlks falkjdsf kaj ",
+      "Embark on your design journey by booking a consultation with our expert architects, turning your vision into a blueprint of possibilities.",
   },
   {
-    title: "lorem isume",
+    title: "ARCHITECTURE",
     description:
       "lorem sd a dkjad fk adklj fakdj alkjg lkdsf ajkl fasjk fadkls fajlks falkjdsf kaj ",
   },

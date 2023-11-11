@@ -16,7 +16,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    padding: 0 2%;
     .textWrapper {
       width: 70%;
       display: flex;
@@ -48,5 +48,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .textWrapper {
+    width: 100% !important;
   }
 }

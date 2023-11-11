@@ -11,7 +11,7 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: white;
+  color: var(--white);
 }
 body {
   background: black;
@@ -21,6 +21,7 @@ body {
   --yellow: #8e7861;
   --paleYellow: #211e19;
   --black: black;
+  --white: #f3f2ed;
 }
 .container {
   min-height: 100vh;

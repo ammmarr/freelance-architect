@@ -5,25 +5,27 @@ const Footer = () => {
   return (
     <div className={style.container}>
       <div className={style.left}>
-        <h2>daksnfk KJS FKJS KLFNAkjd AS</h2>
+        <h2>RECOGNIZING THE NEED IS THE PRIMARY CONDITION</h2>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat
-          deleniti quibusdam magnam! Amet sunt labore nobis soluta, quibusdam
-          voluptas assumenda cumque, eaque blanditiis temporibus doloremque
-          tenetur libero dignissimos, illum mollitia!
+          In the world of architectural design, creativity is the compass
+          guiding us to innovate. Each blueprint is a canvas awaiting
+          inspiration, turning bricks into poetry. Architects are storytellers,
+          crafting structures that inspire and stand as timeless monuments to
+          human achievement.
         </p>
         <Links />
       </div>
-      <div className={style.middle}>
+      {/* <div className={style.middle}>
         <img src={logo} />
-      </div>
+      </div> */}
       <div className={style.last}>
-        <h2>Contact</h2>
-        <span>A: Seestrasse 21, Zurich, Switzerland</span>
-        <span>A: Seestrasse 21, Zurich, Switzerland</span>
-        <span>A: Seestrasse 21, Zurich, Switzerland</span>
-        <span>A: Seestrasse 21, Zurich, Switzerland</span>
-        <span>A: Seestrasse 21, Zurich, Switzerland</span>
+        <div className={style.textContainerToAlignItemsStart}>
+          <h2>Contact</h2>
+          <span>Number: 01551009049</span>
+          <span>Whatsapp: 01034432412</span>
+          <span>Email: mostafa1996uyd@gamil.com</span>
+          <span>Location: Egypt Ismailia Sheikh Zayed</span>
+        </div>
       </div>
     </div>
   );

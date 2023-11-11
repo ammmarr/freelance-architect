@@ -39,6 +39,12 @@
     align-items: end;
     gap: 10px;
     flex: 1;
+    .textContainerToAlignItemsStart {
+      align-items: start;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
     span {
       font-size: 15px;
     }
@@ -60,6 +66,10 @@
     }
     .last {
       align-items: center;
+
+      .textContainerToAlignItemsStart {
+        align-items: center;
+      }
     }
   }
 }

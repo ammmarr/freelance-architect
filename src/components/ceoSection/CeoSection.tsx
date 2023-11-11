@@ -1,5 +1,5 @@
 import style from "./index.module.scss";
-import leftImg from "../../assets/officeImg.jpg";
+import leftImg from "../../assets/subBG.jpeg";
 import ProfileCard from "../profileCard/ProfileCard";
 const CeoSection = () => {
   return (

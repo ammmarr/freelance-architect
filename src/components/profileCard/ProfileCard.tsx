@@ -1,4 +1,4 @@
-import profileImg from "../../assets/owner.jpg";
+import profileImg from "../../assets/370233704_357378639996588_1615738251909673700_n.jpg";
 import Links from "../shared/links/Links";
 import style from "./index.module.scss";
 const ProfileCard = () => {

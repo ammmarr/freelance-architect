@@ -8,11 +8,16 @@ const StartWithIdeaSection = () => {
         <div className={style.textWrapper}>
           <h2>START WITH IDEA</h2>
           <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non provident sunt in culpa qui officia deserunt. Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-            luctus nec ullamcorper mattis, pulvinar dapibus.
+            Architecture, a captivating blend of art and science, unfurls its
+            wings from the cocoon of a single idea. Like a delicate seed planted
+            in the fertile soil of imagination, it germinates and sprouts,
+            weaving a tapestry of form and function. This creative journey
+            transcends blueprints and concrete, evolving into structures that
+            not only shelter but also resonate with the aspirations and
+            ingenuity of their architects. From the initial spark of
+            inspiration, architects navigate a labyrinth of design choices,
+            material considerations, and spatial configurations, sculpting
+            spaces that breathe life into their original vision.
           </p>
           <Button />
         </div>

@@ -116,9 +116,9 @@ const HeroCard = () => {
         >
           {h3}
         </motion.h1>
-        <motion.p variants={variants} transition={{ delay: 0, ease: "easeIn" }}>
+        {/* <motion.p variants={variants} transition={{ delay: 0, ease: "easeIn" }}>
           {p}
-        </motion.p>
+        </motion.p> */}
       </motion.div>
     </motion.div>
   );
