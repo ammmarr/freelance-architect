@@ -1,36 +1,44 @@
 import projects from "../../projectsData";
 import style from "./index.module.scss";
-const ProjectDetailsHeroSection = () => {
+const ProjectDetailsHeroSection = ({ data }: any) => {
+  const projectImages = data?.project_images
+    ? data?.project_images?.data.map((each: any) => (
+        <img src={`${import.meta.env.VITE_DOMAIN}${each.attributes.url}`} />
+      ))
+    : null;
+  const projectVideos = data.project_videos
+    ? data.project_videos.data.map((each: any) => (
+        <video
+          src={`${import.meta.env.VITE_DOMAIN}${each.attributes.url}`}
+          autoPlay
+          width={"100%"}
+          height={"100%"}
+          controls
+        />
+      ))
+    : null;
+  console.log(!!null, "#########");
   return (
     <div className={style.container}>
-      <h1>Project - "Project Name"</h1>
-      <div className={style.imagesContainer}>
-        {projects[0].images.map((each: any) =>
-          typeof each === "string" ? <img src={each} /> : each
-        )}
-      </div>
+      <h1>Project - "{data.name}"</h1>
+      <div className={style.imagesContainer}>{projectVideos}</div>
       <div className={style.textContainer}>
         <div className={style.description}>
-          <h3>Title sakdklas dlksa dlkas </h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
-            minima! Libero, atque dolorem in nulla laudantium tempora eum
-            nesciunt nisi recusandae excepturi eaque aut enim molestias
-            pariatur, est laboriosam obcaecati?
-          </p>
+          <h3>{data.title} </h3>
+          <p>{data.description}</p>
         </div>
         <div className={style.info}>
           <h6>
             <span>ARCHITECTS :</span>
-            skndslkad as d
+            {data.architects}
           </h6>
           <h6>
             <span>LOCATION : </span>
-            ismailias
+            {data.location}
           </h6>
           <h6>
             <span>CATEGORY : </span>
-            sdnsakdk
+            {data.category}
           </h6>
 
           <span></span>

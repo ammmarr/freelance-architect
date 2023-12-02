@@ -2,6 +2,28 @@ import Slider from "react-slick";
 import style from "./index.module.scss";
 import { useRef } from "react";
 import { TrendingFlat } from "@mui/icons-material";
+const carouselData = [
+  {
+    h3: "Frank Lloyd Wright",
+    p: "Form follows function; their unity embodies design, where purpose merges with artistry.",
+  },
+  {
+    h3: "Zaha Hadid",
+    p: "Designing for the future, my aim is to innovate spaces that inspire and endure.",
+  },
+  {
+    h3: "Louis Kahn",
+    p: "Great design begins immeasurably, evolves measurably, and ends immeasurably.",
+  },
+  {
+    h3: "Mies van der Rohe",
+    p: "Simplicity reigns supreme; 'Less is more' epitomizes design purity.",
+  },
+  {
+    h3: "Le Corbusier",
+    p: "Space, light, order—core elements shaping timeless architecture.",
+  },
+];
 const QuotesCarousel = () => {
   let settings = {
     dots: false,
@@ -45,33 +67,12 @@ const QuotesCarousel = () => {
           onClick={goToNextSlide}
         />
         <Slider {...settings} ref={(slider) => (sliderRef.current = slider)}>
-          <div className={style.singleItemContainer}>
-            <h3>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Provident facere harum voluptates numquam dolore repellat
-              exercitationem, eveniet hic quod nesciunt facilis illo laboriosam
-              sed dolorum nihil delectus autem eum molestiae.
-            </h3>
-            <p>ammar omaar</p>
-          </div>
-          <div className={style.singleItemContainer}>
-            <h3>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Provident facere harum voluptates numquam dolore repellat
-              exercitationem, eveniet hic quod nesciunt facilis illo laboriosam
-              sed dolorum nihil delectus autem eum molestiae.
-            </h3>
-            <p>ammar omaar</p>
-          </div>{" "}
-          <div className={style.singleItemContainer}>
-            <h3>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Provident facere harum voluptates numquam dolore repellat
-              exercitationem, eveniet hic quod nesciunt facilis illo laboriosam
-              sed dolorum nihil delectus autem eum molestiae.
-            </h3>
-            <p>ammar omaar</p>
-          </div>
+          {carouselData.map((each: any) => (
+            <div className={style.singleItemContainer}>
+              <h3>{each.p}</h3>
+              <p>{each.h3}</p>
+            </div>
+          ))}
         </Slider>
       </div>
     </div>

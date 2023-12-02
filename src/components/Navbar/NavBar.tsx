@@ -1,5 +1,5 @@
 import style from "./index.module.scss";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logoo.png";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 export const NavBar = () => {

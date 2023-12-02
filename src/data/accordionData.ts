@@ -7,17 +7,17 @@ const accordionData = [
   {
     title: "ARCHITECTURE",
     description:
-      "lorem sd a dkjad fk adklj fakdj alkjg lkdsf ajkl fasjk fadkls fajlks falkjdsf kaj ",
+      "Crafting architectural visions that captivate, I bring expertise to transform spaces into inspired, client-centric havens, making your dreams a tangible reality.",
   },
   {
-    title: "lorem isume",
+    title: "Projects",
     description:
-      "lorem sd a dkjad fk adklj fakdj alkjg lkdsf ajkl fasjk fadkls fajlks falkjdsf kaj ",
+      "Envisioning Architectural Marvels: A Portfolio of Inspired Creations.",
   },
   {
-    title: "lorem isume",
+    title: "Constrution",
     description:
-      "lorem sd a dkjad fk adklj fakdj alkjg lkdsf ajkl fasjk fadkls fajlks falkjdsf kaj ",
+      "Building Dreams, Crafting Realities: Transforming Blueprints into Timeless Structures.",
   },
 ];
 

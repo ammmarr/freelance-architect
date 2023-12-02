@@ -7,7 +7,6 @@ const Accordion = () => {
   const [open, setIsOpen] = useState(false);
   const [currentActivAcc, setCurrentActivAcc] = useState<number[]>([]);
   function handleAccClick(i: number) {
-    console.log(i);
     if (!currentActivAcc.includes(i)) {
       setCurrentActivAcc((prev) => [...prev, i]);
     } else {
@@ -15,7 +14,6 @@ const Accordion = () => {
       setCurrentActivAcc([...removed]);
     }
   }
-  console.log(currentActivAcc);
   return (
     <div className={style.container}>
       {accordionData.map((item, i) => (

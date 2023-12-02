@@ -7,23 +7,24 @@ import ProjectsSectionHome from "../components/projectsSectionHome/ProjectsSecti
 import QuotesCarousel from "../components/quotesCarousel/QuotesCarousel";
 import ReadInsightSection from "../components/readInsightsSection/ReadInsightSection";
 import StartWithIdeaSection from "../components/startWithIdeaSection/StartWithIdeaSection";
+import useGetData from "../hooks/useGetData";
 import transition from "../transitions/PageTransitions";
 
 const Home = () => {
+  const { data, loading, error } = useGetData(
+    `${import.meta.env.VITE_DOMAIN}/api/projects?populate=*`
+  );
   return (
     <>
-      <>
-        {" "}
-        <HeroCard />
-        <ProjectsSectionHome />
-        <StartWithIdeaSection />
-        <CeoSection />
-        <AccordionSection />
-        <ReadInsightSection />
-        <QuotesCarousel />
-        <ContactSection />
-        <Footer />
-      </>
+      <HeroCard />
+      <ProjectsSectionHome data={data} />
+      <StartWithIdeaSection />
+      <CeoSection />
+      <AccordionSection />
+      <ReadInsightSection data={data} />
+      <QuotesCarousel />
+      <ContactSection />
+      <Footer />
     </>
   );
 };

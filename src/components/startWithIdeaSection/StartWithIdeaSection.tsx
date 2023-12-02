@@ -1,6 +1,7 @@
 import style from "./index.module.scss";
 import stairs from "../../assets/stairs.png";
 import Button from "../shared/Button/Button";
+import { Link } from "react-scroll";
 const StartWithIdeaSection = () => {
   return (
     <div className={style.container}>
@@ -19,7 +20,16 @@ const StartWithIdeaSection = () => {
             material considerations, and spatial configurations, sculpting
             spaces that breathe life into their original vision.
           </p>
-          <Button />
+          <Link
+            activeClass="active"
+            to="targetSection"
+            spy={true}
+            smooth={true}
+            offset={-20} // Adjust the offset according to your layout
+            duration={500}
+          >
+            <Button />
+          </Link>
         </div>
       </div>
       <div className={style.imgContainer}>

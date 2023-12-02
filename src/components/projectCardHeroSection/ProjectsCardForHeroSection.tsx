@@ -1,17 +1,27 @@
 import demo from "../../assets/sliderImg1.jpg";
+import getDateInCostumeFormat from "../../utils/getDateInCustomFormat";
 import style from "./index.module.scss";
-const ProjectsCardForHeroSection = () => {
+const ProjectsCardForHeroSection = ({ data }: any) => {
+  console.log(data.attributes, "lksad");
+  const name = data.attributes.name;
+  const image = `${import.meta.env.VITE_DOMAIN}${
+    data.attributes.main_thumbnail_image.data.attributes.url
+  }`;
+  const { month, day } = getDateInCostumeFormat(
+    data.attributes.time_of_completion
+  );
+  console.log(month, day);
   return (
     <div className={style.container}>
       <div className={style.imageContainer}>
-        <img src={demo} />
+        <img src={image} />
       </div>
       <div className={style.bottomSection}>
         <div className={style.date}>
-          <h6>3</h6>
-          <div className={style.month}>May</div>
+          <h6>{day}</h6>
+          <div className={style.month}>{month}</div>
         </div>
-        <h3> Project Name</h3>
+        <h3> {name}</h3>
       </div>
     </div>
   );

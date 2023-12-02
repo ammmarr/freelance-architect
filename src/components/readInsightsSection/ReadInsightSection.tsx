@@ -3,7 +3,7 @@ import ProjectsCardForHeroSection from "../projectCardHeroSection/ProjectsCardFo
 import style from "./index.module.scss";
 import { useRef, useState } from "react";
 import Slider from "react-slick";
-const ReadInsightSection = () => {
+const ReadInsightSection = ({ data }: any) => {
   let settings = {
     dots: true,
     infinite: true,
@@ -13,7 +13,7 @@ const ReadInsightSection = () => {
     autoplay: true,
     autoplaySpeed: 2000,
   };
-  const sliderRef = useRef<Slider | null>(null);  
+  const sliderRef = useRef<Slider | null>(null);
 
   const goToNextSlide = () => {
     if (sliderRef.current) {
@@ -32,12 +32,13 @@ const ReadInsightSection = () => {
       ...clonedSettings,
     };
   }
+  console.log(data, "sdasd");
   return (
     <div className={style.container}>
       <div className={style.wrapper}>
         <h2>read insights</h2>
         <div className={style.pAndButtonsCotainer}>
-          <p> sknafkjandfj akjldsf kjlas sa dkljadf lajk</p>
+          <p> Take a look at our latest projects</p>
           <div className={style.buttonsContainer}>
             <TrendingFlat
               className={`${style.iconContainer} ${style.transformLeft}`}
@@ -54,11 +55,10 @@ const ReadInsightSection = () => {
 
         <div className={style.projectsSlider}>
           <Slider {...settings} ref={(slider) => (sliderRef.current = slider)}>
-            <ProjectsCardForHeroSection />
-            <ProjectsCardForHeroSection />
-            <ProjectsCardForHeroSection />
-            <ProjectsCardForHeroSection />
-            <ProjectsCardForHeroSection />
+            {data &&
+              data.map((project: any) => (
+                <ProjectsCardForHeroSection data={project} />
+              ))}
           </Slider>
         </div>
       </div>

@@ -40,6 +40,9 @@
     }
     .icon {
       color: var(--yellow);
+      path {
+        color: var(--yellow);
+      }
     }
     .number {
       font-size: 150px;

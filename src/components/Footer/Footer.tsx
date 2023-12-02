@@ -1,7 +1,11 @@
 import Links from "../shared/links/Links";
 import style from "./index.module.scss";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logoo.png";
+import useGetData from "../../hooks/useGetData";
 const Footer = () => {
+  const { data, loading, error } = useGetData(
+    `${import.meta.env.VITE_DOMAIN}/api/main-info?populate=*`
+  );
   return (
     <div className={style.container}>
       <div className={style.left}>
@@ -13,18 +17,28 @@ const Footer = () => {
           crafting structures that inspire and stand as timeless monuments to
           human achievement.
         </p>
-        <Links />
+        <Links
+          facebook={data?.attributes?.facebook}
+          instagram={data?.attributes?.instagram}
+          linkedIn={data?.attributes?.linkedIn}
+        />
       </div>
-      {/* <div className={style.middle}>
+      <div className={style.middle}>
         <img src={logo} />
-      </div> */}
+      </div>
       <div className={style.last}>
         <div className={style.textContainerToAlignItemsStart}>
           <h2>Contact</h2>
-          <span>Number: 01551009049</span>
-          <span>Whatsapp: 01034432412</span>
-          <span>Email: mostafa1996uyd@gamil.com</span>
-          <span>Location: Egypt Ismailia Sheikh Zayed</span>
+          {data?.attributes.contact_number && (
+            <span>Number: {data.attributes.contact_number}</span>
+          )}
+          {data?.attributes.whatsapp_number && (
+            <span>Whatsapp: {data.attributes.whatsapp_number} </span>
+          )}
+          {data?.attributes.email && <span>Email:{data.attributes.email}</span>}
+          {data?.attributes.location && (
+            <span>Location: {data.attributes.location}</span>
+          )}
         </div>
       </div>
     </div>

@@ -1,12 +1,25 @@
 import style from "./index.module.scss";
-const Links = () => {
+const Links = ({ facebook, instagram, linkedIn }: any) => {
   return (
     <div className={style.container}>
-      <a>LI</a>
+      {linkedIn && (
+        <a href={linkedIn} target="_blank">
+          LI
+        </a>
+      )}
       <div className={style.divider} />
-      <a>IG</a>
+      {instagram && (
+        <a href={instagram} target="_blank">
+          IG
+        </a>
+      )}
+
       <div className={style.divider} />
-      <a>FB</a>
+      {facebook && (
+        <a href={facebook} target="_blank">
+          FB
+        </a>
+      )}
     </div>
   );
 };

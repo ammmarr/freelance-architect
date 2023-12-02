@@ -7,8 +7,9 @@ const AccordionSection = () => {
         <div className={style.leftContainer}>
           <h1>ARRAY OF SERVICES AND SKILLS</h1>
           <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur cepteur sint occaecat.
+            Combining creativity and architectural prowess, I specialize in
+            crafting spaces that marry innovation with practicality, offering
+            designs that captivate and inspire.
           </p>
         </div>
         <div className={style.rightContainer}>
