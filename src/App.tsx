@@ -7,7 +7,6 @@ import routes from "./routes";
 
 function App() {
   const location = useLocation();
-
   return (
     <>
       <AnimatePresence mode="wait">

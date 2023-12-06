@@ -55,8 +55,8 @@ const ReadInsightSection = ({ data }: any) => {
         <div className={style.projectsSlider}>
           <Slider {...settings} ref={(slider) => (sliderRef.current = slider)}>
             {data &&
-              data.map((project: any) => (
-                <ProjectsCardForHeroSection data={project} />
+              data.map((project: any, i: number) => (
+                <ProjectsCardForHeroSection data={project} key={i} />
               ))}
           </Slider>
         </div>

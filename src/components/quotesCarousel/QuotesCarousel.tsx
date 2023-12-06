@@ -67,8 +67,8 @@ const QuotesCarousel = () => {
           onClick={goToNextSlide}
         />
         <Slider {...settings} ref={(slider) => (sliderRef.current = slider)}>
-          {carouselData.map((each: any) => (
-            <div className={style.singleItemContainer}>
+          {carouselData.map((each: any, i: number) => (
+            <div className={style.singleItemContainer} key={i}>
               <h3>{each.p}</h3>
               <p>{each.h3}</p>
             </div>
