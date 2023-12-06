@@ -7,7 +7,6 @@ const ProjectCardForProjectsPage = ({ data, number }: any) => {
   const coverImage = `${import.meta.env.VITE_DOMAIN}${
     data.attributes.main_thumbnail_image.data.attributes.url
   }`;
-  console.log(data.attributes.name);
   const name = data.attributes.name;
   const category = data.attributes.category;
   return (

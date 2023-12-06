@@ -6,9 +6,9 @@ const ProfileCard = () => {
   const { data, loading, error } = useGetData(
     `${import.meta.env.VITE_DOMAIN}/api/main-info?populate=*`
   );
-  console.log(data?.attributes.profile_image.data.attributes.formats.large.url);
-  const profile_image =
-    data?.attributes.profile_image.data.attributes.formats.large.url;
+
+  const profile_image = data?.attributes?.profile_image?.data.attributes.url;
+  console.log();
   return (
     <div className={style.container}>
       <div className={style.top}>

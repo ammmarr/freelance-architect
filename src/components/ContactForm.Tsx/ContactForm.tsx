@@ -18,7 +18,6 @@ const ContactForm = () => {
       formData
     );
   };
-  console.log(formData);
   return (
     <form
       className={style.container}

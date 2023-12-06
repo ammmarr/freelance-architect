@@ -32,7 +32,6 @@ const ReadInsightSection = ({ data }: any) => {
       ...clonedSettings,
     };
   }
-  console.log(data, "sdasd");
   return (
     <div className={style.container}>
       <div className={style.wrapper}>

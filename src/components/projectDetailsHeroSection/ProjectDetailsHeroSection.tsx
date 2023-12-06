@@ -17,7 +17,6 @@ const ProjectDetailsHeroSection = ({ data }: any) => {
         />
       ))
     : null;
-  console.log(!!null, "#########");
   return (
     <div className={style.container}>
       <h1>Project - "{data.name}"</h1>
