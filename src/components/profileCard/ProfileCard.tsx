@@ -12,7 +12,7 @@ const ProfileCard = () => {
   return (
     <div className={style.container}>
       <div className={style.top}>
-        <img src={`${import.meta.env.VITE_DOMAIN}${profile_image}`} />
+        <img src={`${profile_image}`} />
       </div>
       <h2>Mostafa Nasser</h2>
       <Links

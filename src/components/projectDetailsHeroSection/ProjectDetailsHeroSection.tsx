@@ -1,26 +1,31 @@
 import projects from "../../projectsData";
 import style from "./index.module.scss";
 const ProjectDetailsHeroSection = ({ data }: any) => {
-  const projectImages = data?.project_images
-    ? data?.project_images?.data.map((each: any) => (
-        <img src={`${import.meta.env.VITE_DOMAIN}${each.attributes.url}`} />
-      ))
+  const projectImages = data.project_images
+    ? data.project_images.data?.project_images?.data.map(
+        (each: any, i: number) => <img src={`${each.attributes.url}`} key={i} />
+      )
     : null;
   const projectVideos = data.project_videos
     ? data.project_videos.data.map((each: any) => (
         <video
-          src={`${import.meta.env.VITE_DOMAIN}${each.attributes.url}`}
+          src={`${each.attributes.url}`}
           autoPlay
           width={"100%"}
           height={"100%"}
           controls
+          preload="metadata"
         />
       ))
     : null;
   return (
     <div className={style.container}>
       <h1>Project - "{data.name}"</h1>
-      <div className={style.imagesContainer}>{projectVideos}</div>
+      <div className={style.imagesContainer}>
+        {projectVideos && projectVideos}
+        {/* {projectImages && projectImages} */}
+      </div>
+
       <div className={style.textContainer}>
         <div className={style.description}>
           <h3>{data.title} </h3>

@@ -11,7 +11,7 @@ const Project = () => {
   );
   return (
     <div>
-      {!!data && <ProjectDetailsHeroSection data={data.attributes} />}
+      {data && <ProjectDetailsHeroSection data={data.attributes} />}
       <Footer />
     </div>
   );

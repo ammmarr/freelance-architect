@@ -4,9 +4,7 @@ import demo from "../../assets/sliderImg2.jpg";
 import { useNavigate } from "react-router-dom";
 const ProjectCardForProjectsPage = ({ data, number }: any) => {
   const navigate = useNavigate();
-  const coverImage = `${import.meta.env.VITE_DOMAIN}${
-    data.attributes.main_thumbnail_image.data.attributes.url
-  }`;
+  const coverImage = `${data.attributes.main_thumbnail_image.data.attributes.url}`;
   const name = data.attributes.name;
   const category = data.attributes.category;
   return (

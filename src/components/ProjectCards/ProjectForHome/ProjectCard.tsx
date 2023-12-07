@@ -4,9 +4,7 @@ import style from "./index.module.scss";
 import { useNavigate } from "react-router-dom";
 const ProjectCard = ({ data, number }: any) => {
   const navigate = useNavigate();
-  const coverImage = `${import.meta.env.VITE_DOMAIN}${
-    data.attributes.main_thumbnail_image.data.attributes.url
-  }`;
+  const coverImage = `${data.attributes.main_thumbnail_image.data.attributes.url}`;
   return (
     <div
       className={style.container}
