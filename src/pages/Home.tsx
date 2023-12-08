@@ -15,7 +15,7 @@ const Home = () => {
     `${import.meta.env.VITE_DOMAIN}/api/projects?populate=*`
   );
   return (
-    <>
+    <div>
       <HeroCard />
       <ProjectsSectionHome data={data} />
       <StartWithIdeaSection />
@@ -25,7 +25,7 @@ const Home = () => {
       <QuotesCarousel />
       <ContactSection />
       <Footer />
-    </>
+    </div>
   );
 };
 
