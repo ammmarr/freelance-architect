@@ -16,7 +16,6 @@ function useGetData(url: string) {
       try {
         const response = await axios.get(url, config);
         setData(response.data.data);
-        console.log(response.data.data, "res");
       } catch (error: any) {
         setError(error.message); // You can customize this error handling logic
       } finally {

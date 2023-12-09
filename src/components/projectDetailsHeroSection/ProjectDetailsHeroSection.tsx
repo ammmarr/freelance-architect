@@ -1,12 +1,13 @@
+import Markdown from "markdown-to-jsx";
 import projects from "../../projectsData";
 import style from "./index.module.scss";
 const ProjectDetailsHeroSection = ({ data }: any) => {
-  const projectImages = data.project_images
-    ? data.project_images.data?.project_images?.data.map(
-        (each: any, i: number) => <img src={`${each.attributes.url}`} key={i} />
-      )
+  const projectImages = data.project_images.data
+    ? data.project_images.data?.map((each: any, i: number) => (
+        <img src={`${each.attributes.url}`} key={i} />
+      ))
     : null;
-  const projectVideos = data.project_videos
+  const projectVideos = data.project_videos.data
     ? data.project_videos.data.map((each: any) => (
         <video
           src={`${each.attributes.url}`}
@@ -19,12 +20,13 @@ const ProjectDetailsHeroSection = ({ data }: any) => {
         />
       ))
     : null;
+
   return (
     <div className={style.container}>
       <h1>Project - "{data.name}"</h1>
       <div className={style.imagesContainer}>
         {projectVideos && projectVideos}
-        {/* {projectImages && projectImages} */}
+        {projectImages && projectImages}
       </div>
 
       <div className={style.textContainer}>
@@ -45,7 +47,10 @@ const ProjectDetailsHeroSection = ({ data }: any) => {
             </h6>
           </div>
         </div>
-        <p>{data.description}</p>
+        <div
+          dangerouslySetInnerHTML={{ __html: data.description }}
+          className={style.content}
+        />
       </div>
     </div>
   );
