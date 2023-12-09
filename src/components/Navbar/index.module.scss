@@ -36,11 +36,12 @@
     display: -webkit-box; /* Safari, iOS, Android browser */
     display: -ms-flexbox; /* IE 10 */
     display: flex;
-    width: fit-content;
+    width: fit-content !important;
     -webkit-box-align: end; /* Safari, iOS, Android browser */
     -ms-flex-align: end; /* IE 10 */
     align-items: end;
     margin: 0;
+    padding: 0;
     outline: red 1px solid;
     img {
       width: 100%;
@@ -51,6 +52,7 @@
       background-size: contain;
       background-position: center center;
       background-repeat: no-repeat;
+      outline: red 1px solid;
     }
   }
 
