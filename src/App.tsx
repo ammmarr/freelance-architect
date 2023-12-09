@@ -1,7 +1,8 @@
 import { AnimatePresence } from "framer-motion";
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
+import Footer from "./components/Footer/Footer";
 import { NavBar } from "./components/Navbar/NavBar";
 import routes from "./routes";
 
@@ -18,6 +19,7 @@ function App() {
             </>
           ))}
         </Routes>
+        <Footer />
       </AnimatePresence>
     </>
   );
