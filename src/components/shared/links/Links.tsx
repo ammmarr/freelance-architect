@@ -3,11 +3,13 @@ const Links = ({ facebook, instagram, linkedIn }: any) => {
   return (
     <div className={style.container}>
       {linkedIn && (
-        <a href={linkedIn} target="_blank">
-          LI
-        </a>
+        <>
+          <a href={linkedIn} target="_blank">
+            LI
+          </a>
+          <div className={style.divider} />
+        </>
       )}
-      <div className={style.divider} />
       {instagram && (
         <a href={instagram} target="_blank">
           IG

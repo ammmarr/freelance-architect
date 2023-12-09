@@ -15,18 +15,22 @@ const Home = () => {
   const { data, loading, error } = useGetData(
     `${import.meta.env.VITE_DOMAIN}/api/projects?populate=*`
   );
+  const maininfoData = useGetData(
+    `${import.meta.env.VITE_DOMAIN}/api/main-info?populate=*`
+  );
+
   return (
     <div>
       <NavBar />
       <HeroCard />
       <ProjectsSectionHome data={data} />
       <StartWithIdeaSection />
-      <CeoSection />
+      <CeoSection data={maininfoData.data} />
       <AccordionSection />
       <ReadInsightSection data={data} />
       <QuotesCarousel />
       <ContactSection />
-      <Footer />
+      <Footer data={maininfoData.data} />
     </div>
   );
 };

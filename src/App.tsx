@@ -10,6 +10,7 @@ function App() {
   return (
     <>
       <AnimatePresence mode="wait">
+        <NavBar />
         <Routes location={location} key={location.pathname}>
           {routes.map((each, i) => (
             <>

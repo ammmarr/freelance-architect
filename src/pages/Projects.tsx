@@ -1,6 +1,7 @@
 import Footer from "../components/Footer/Footer";
 import { NavBar } from "../components/Navbar/NavBar";
 import { ProjectsHeroSection } from "../components/projectsHeroSection/ProjectsHeroSection";
+import ProjectsHeroSectionSkeleton from "../components/projectsHeroSectionSkeleton/ProjectsHeroSectionSkeleton";
 import useGetData from "../hooks/useGetData";
 import transition from "../transitions/PageTransitions";
 
@@ -11,7 +12,12 @@ const Projects = () => {
   return (
     <>
       <NavBar />
-      {data && <ProjectsHeroSection key={data.id} data={data} />}
+      {data ? (
+        <ProjectsHeroSection key={data.id} data={data} />
+      ) : (
+        <ProjectsHeroSectionSkeleton />
+      )}
+
       <Footer />
     </>
   );

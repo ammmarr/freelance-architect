@@ -15,6 +15,7 @@ const ProjectDetailsHeroSection = ({ data }: any) => {
           height={"100%"}
           controls
           preload="metadata"
+          muted
         />
       ))
     : null;
@@ -27,26 +28,24 @@ const ProjectDetailsHeroSection = ({ data }: any) => {
       </div>
 
       <div className={style.textContainer}>
-        <div className={style.description}>
+        <div className={style.header}>
           <h3>{data.title} </h3>
-          <p>{data.description}</p>
+          <div className={style.info}>
+            <h6>
+              <span>ARCHITECTS :</span>
+              {data.architects}
+            </h6>
+            <h6>
+              <span>LOCATION : </span>
+              {data.location}
+            </h6>
+            <h6>
+              <span>CATEGORY : </span>
+              {data.category}
+            </h6>
+          </div>
         </div>
-        <div className={style.info}>
-          <h6>
-            <span>ARCHITECTS :</span>
-            {data.architects}
-          </h6>
-          <h6>
-            <span>LOCATION : </span>
-            {data.location}
-          </h6>
-          <h6>
-            <span>CATEGORY : </span>
-            {data.category}
-          </h6>
-
-          <span></span>
-        </div>
+        <p>{data.description}</p>
       </div>
     </div>
   );

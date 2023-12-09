@@ -35,11 +35,7 @@ const ContactForm = () => {
       <div className={style.inputContainer}>
         <textarea placeholder="Message" name="message" id="message" />
       </div>
-      <button
-        className="button"
-        style={{ padding: "  20px 40px" }}
-        type="submit"
-      >
+      <button className="button" type="submit">
         <span>Send Message!</span>
       </button>
     </form>

@@ -7,39 +7,20 @@ let config = {
   },
 };
 async function postMessage(url: string, messageObj: any) {
-  //   let body = {
-  //     data: {
-  //       ...messageObj,
-  //       meta: {},
-  //     },
-  //   };
-  //   let response;
-  //   console.log(body);
-  //   try {
-  //     response = await axios.post(url, JSON.stringify(body), config);
-  //   } catch (error: any) {
-  //     response = error;
-  //     return;
-  //   }
-  //   return response;
-  fetch(
-    `${import.meta.env.VITE_DOMAIN}/api/message-sent-from-users
-`,
-    {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${import.meta.env.VITE_API_TOKEN}`,
+  fetch(url, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${import.meta.env.VITE_API_TOKEN}`,
 
-        "Content-Type": "application/json",
-        // Add any additional headers if required
+      "Content-Type": "application/json",
+      // Add any additional headers if required
+    },
+    body: JSON.stringify({
+      data: {
+        ...messageObj,
       },
-      body: JSON.stringify({
-        data: {
-          ...messageObj,
-        },
-      }),
-    }
-  )
+    }),
+  })
     .then((response) => response.json())
     .then((data) => {
       console.log("Success:", data);

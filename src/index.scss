@@ -38,13 +38,14 @@ body {
   overflow: hidden;
   width: fit-content;
   cursor: pointer;
-  padding: 5px 50px;
+  padding: 5px 30px;
   margin: 20px 0;
   span {
     color: var(--yellow);
     z-index: 2;
     transition: all 0.5s ease;
     font-size: 20px;
+    height: fit-content;
   }
   &::after {
     content: "";

@@ -2,13 +2,8 @@ import profileImg from "../../assets/370233704_357378639996588_16157382519096737
 import useGetData from "../../hooks/useGetData";
 import Links from "../shared/links/Links";
 import style from "./index.module.scss";
-const ProfileCard = () => {
-  const { data, loading, error } = useGetData(
-    `${import.meta.env.VITE_DOMAIN}/api/main-info?populate=*`
-  );
-
+const ProfileCard = ({ data }: any) => {
   const profile_image = data?.attributes?.profile_image?.data.attributes.url;
-  console.log();
   return (
     <div className={style.container}>
       <div className={style.top}>

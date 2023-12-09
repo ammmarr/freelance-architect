@@ -2,10 +2,7 @@ import Links from "../shared/links/Links";
 import style from "./index.module.scss";
 import logo from "../../assets/logoo.png";
 import useGetData from "../../hooks/useGetData";
-const Footer = () => {
-  const { data, loading, error } = useGetData(
-    `${import.meta.env.VITE_DOMAIN}/api/main-info?populate=*`
-  );
+const Footer = ({ data }: any) => {
   return (
     <div className={style.container}>
       <div className={style.left}>
