@@ -30,7 +30,6 @@ const Home = () => {
       <ReadInsightSection data={data} />
       <QuotesCarousel />
       <ContactSection />
-      <Footer />
     </div>
   );
 };

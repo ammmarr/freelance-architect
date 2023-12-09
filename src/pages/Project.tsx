@@ -10,7 +10,6 @@ const Project = () => {
   const { data, loading, error } = useGetData(
     `${import.meta.env.VITE_DOMAIN}/api/projects/${params.id}?populate=*`
   );
-  console.log(data, "project");
   return (
     <div>
       {data ? (
@@ -18,7 +17,6 @@ const Project = () => {
       ) : (
         <ProjectDetailsHeroSectionSkeleton />
       )}
-      <Footer />
     </div>
   );
 };

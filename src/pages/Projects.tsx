@@ -11,14 +11,11 @@ const Projects = () => {
   );
   return (
     <>
-      <NavBar />
       {data ? (
         <ProjectsHeroSection key={data.id} data={data} />
       ) : (
         <ProjectsHeroSectionSkeleton />
       )}
-
-      <Footer />
     </>
   );
 };
