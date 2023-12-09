@@ -1,4 +1,5 @@
 import Footer from "../components/Footer/Footer";
+import { NavBar } from "../components/Navbar/NavBar";
 import AccordionSection from "../components/accordionSection/AccordionSection";
 import CeoSection from "../components/ceoSection/CeoSection";
 import ContactSection from "../components/contactSectionForm/contactSection";
@@ -16,6 +17,7 @@ const Home = () => {
   );
   return (
     <div>
+      <NavBar />
       <HeroCard />
       <ProjectsSectionHome data={data} />
       <StartWithIdeaSection />
