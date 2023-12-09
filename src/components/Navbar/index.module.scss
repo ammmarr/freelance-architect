@@ -37,6 +37,7 @@
     display: -webkit-box; /* Safari, iOS, Android browser */
     display: -ms-flexbox; /* IE 10 */
     display: flex;
+    width: fit-content;
     -webkit-box-align: end; /* Safari, iOS, Android browser */
     -ms-flex-align: end; /* IE 10 */
     align-items: end;
