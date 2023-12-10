@@ -21,7 +21,6 @@ const Home = () => {
 
   return (
     <div>
-      <NavBar />
       <HeroCard />
       <ProjectsSectionHome data={data} />
       <StartWithIdeaSection />
