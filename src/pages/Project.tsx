@@ -1,19 +1,23 @@
-import { useParams } from "react-router-dom";
-import Footer from "../components/Footer/Footer";
+// import { useParams } from "react-router-dom";
 import ProjectDetailsHeroSection from "../components/projectDetailsHeroSection/ProjectDetailsHeroSection";
-import useGetData from "../hooks/useGetData";
-import transition from "../transitions/PageTransitions";
+// import useGetData from "../hooks/useGetData";
+import { useParams } from "react-router-dom";
 import ProjectDetailsHeroSectionSkeleton from "../components/projectDetailsHeroSectionSkeleton/ProjectDetailsHeroSectionSkeleton";
+import transition from "../transitions/PageTransitions";
+import { data } from "./Projects";
 
 const Project = () => {
   const params = useParams();
-  const { data, loading, error } = useGetData(
-    `${import.meta.env.VITE_DOMAIN}/api/projects/${params.id}?populate=*`
-  );
+  const projectID: number = params.id - 1;
+  // const { data, loading, error } = useGetData(
+  //   `${import.meta.env.VITE_DOMAIN}/api/projects/${params.id}?populate=*`
+  // );
+  console.log(data[projectID].attributes, "att");
   return (
     <div>
       {data ? (
-        <ProjectDetailsHeroSection data={data.attributes} />
+        // Code Issue
+        <ProjectDetailsHeroSection data={data[projectID].attributes} />
       ) : (
         <ProjectDetailsHeroSectionSkeleton />
       )}
