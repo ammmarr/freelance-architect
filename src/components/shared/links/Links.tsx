@@ -1,5 +1,9 @@
+import { socials } from "../../../data/mainData";
 import style from "./index.module.scss";
-const Links = ({ facebook, instagram, linkedIn }: any) => {
+const Links = () => {
+  const linkedIn = socials.linkedin;
+  const facebook = socials.facebook;
+  const instagram = socials.instagram;
   return (
     <div className={style.container}>
       {linkedIn && (

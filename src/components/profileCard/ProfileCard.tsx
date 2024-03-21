@@ -9,11 +9,7 @@ const ProfileCard = () => {
         <img src={`${profileImage}`} />
       </div>
       <h2>Mostafa Nasser</h2>
-      {/* <Links
-        facebook={data?.attributes.facebook}
-        instagram={data?.attributes.instagram}
-        linkedIn={data?.attributes.linkedIn}
-      /> */}
+      <Links />
     </div>
   );
 };

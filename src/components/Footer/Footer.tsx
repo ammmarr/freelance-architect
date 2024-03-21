@@ -1,4 +1,5 @@
 import logo from "../../assets/logoo.png";
+import Links from "../shared/links/Links";
 import style from "./index.module.scss";
 const Footer = () => {
   // const { data, loading, error } = useGetData(
@@ -15,11 +16,7 @@ const Footer = () => {
           crafting structures that inspire and stand as timeless monuments to
           human achievement.
         </p>
-        {/* <Links
-          facebook={data?.attributes?.facebook}
-          instagram={data?.attributes?.instagram}
-          linkedIn={data?.attributes?.linkedIn}
-        /> */}
+        <Links />
       </div>
       <div className={style.middle}>
         <img src={logo} />
@@ -29,7 +26,7 @@ const Footer = () => {
           <h2>Contact</h2>
           <span>Number: +201094492412</span>
           <span>Whatsapp: +201094492412 </span>
-          <span>Email: email@email.com</span>
+          <span>Email: Mostafa1996nasser@gmail.com</span>
           <span>Location: Ismailia, Egypt</span>
         </div>
       </div>
