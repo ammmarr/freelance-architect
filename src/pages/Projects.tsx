@@ -1,6 +1,10 @@
 import { ProjectsHeroSection } from "../components/projectsHeroSection/ProjectsHeroSection";
 import ProjectsHeroSectionSkeleton from "../components/projectsHeroSectionSkeleton/ProjectsHeroSectionSkeleton";
 import transition from "../transitions/PageTransitions";
+import project_one from "../assets/projects/project_one.jpg";
+import project_two from "../assets/projects/project_two.jpg";
+import project_three from "../assets/projects/project_three.jpg";
+import project_four from "../assets/projects/project_four.jpg";
 // import useGetData from "../hooks/useGetData";
 
 // Projects Data
@@ -20,7 +24,7 @@ export const data = [
       main_thumbnail_image: {
         data: {
           attributes: {
-            url: "src/assets/projects/project_one.jpg",
+            url: project_one,
           },
         },
       },
@@ -28,7 +32,7 @@ export const data = [
         data: [
           {
             attributes: {
-              url: "../src/assets/projects/project_one.jpg",
+              url: project_one,
             },
           },
         ],
@@ -77,7 +81,7 @@ export const data = [
       main_thumbnail_image: {
         data: {
           attributes: {
-            url: "src/assets/projects/project_two.jpg",
+            url: project_two,
           },
         },
       },
@@ -85,7 +89,7 @@ export const data = [
         data: [
           {
             attributes: {
-              url: "../src/assets/projects/project_two.jpg",
+              url: project_two,
             },
           },
         ],
@@ -124,7 +128,7 @@ export const data = [
       main_thumbnail_image: {
         data: {
           attributes: {
-            url: "src/assets/projects/project_three.jpg",
+            url: project_three,
           },
         },
       },
@@ -132,7 +136,7 @@ export const data = [
         data: [
           {
             attributes: {
-              url: "../src/assets/projects/project_three.jpg",
+              url: project_three,
             },
           },
         ],
@@ -166,7 +170,7 @@ export const data = [
       main_thumbnail_image: {
         data: {
           attributes: {
-            url: "src/assets/projects/project_four.jpg",
+            url: project_four,
           },
         },
       },
@@ -174,7 +178,7 @@ export const data = [
         data: [
           {
             attributes: {
-              url: "../src/assets/projects/project_four.jpg",
+              url: project_four,
             },
           },
         ],
