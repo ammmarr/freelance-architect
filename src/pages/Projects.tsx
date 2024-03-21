@@ -4,7 +4,7 @@ import transition from "../transitions/PageTransitions";
 import project_one from "../assets/projects/project_one.jpg";
 import project_two from "../assets/projects/project_two.jpg";
 import project_three from "../assets/projects/project_three.jpg";
-import project_four from "../assets/projects/project_four.jpg";
+import project_four from "../assets/projects/Project_four.jpg";
 // import useGetData from "../hooks/useGetData";
 
 // Projects Data
